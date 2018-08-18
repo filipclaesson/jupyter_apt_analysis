@@ -1,3 +1,4 @@
+create table export_for_analysis_20180815 as 
 with locations as (
 select 
 booli_id
@@ -21,8 +22,7 @@ where area_from_geo is not null
 
 
 
-
 -- export csv:
 -- bash: psql
 \c metrics-dev
-\copy (select * from public.export_for_analysis_20180608) TO '/Users/Filip/Desktop/test.csv' DELIMITER ',' CSV HEADER;
+\copy (select * from public.export_for_analysis_20180815) TO '/Users/Filip/Desktop/20180815_raw_geo.csv' DELIMITER ',' CSV HEADER;
