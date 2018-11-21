@@ -70,3 +70,5 @@ refresh materialized view "Apartments";
 -- bash: psql
 \c metrics-dev
 \copy (select * from public."Apartments") TO '/Users/Filip/Desktop/test.csv' DELIMITER ',' CSV HEADER;
+
+-- see populate_apt.sql
